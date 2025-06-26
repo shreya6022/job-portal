@@ -1,0 +1,414 @@
+@media (max-width: 768px) {
+    .content {
+      padding: 0px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      padding: 0px;
+    }
+  }
+  @media (max-width: 1300px) {
+    .content {
+      padding: 0px;
+    }
+  }
+
+
+#cdfull{
+    width: 100%;
+}
+    
+.na{
+position: sticky;
+}
+.nav-link:hover{
+    border-radius: 10px;
+    background-color: black;
+
+}
+#b{
+    font-size: larger;
+    color:black;
+    text-align:center ;
+    padding-left: 60px;
+    padding-top: 5px;
+    font-weight: 800;
+    font-size: 30px;
+    font-style: italic;
+
+    
+}
+#i{
+    float:right;
+    padding-top:30px ;
+    margin-left: 500px;
+    font-size: 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+    height: 50px;
+    
+}
+.col {
+    flex: 1; /* Equal width columns */
+    padding: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+#n{
+    padding-right: 0;
+}
+#c{
+    width: max-content;
+    
+    height: 70px;
+}
+#top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    z-index: 1000; /* Keeps it above other elements */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+#nb{
+    margin-top: 80px;
+}
+
+#topl, #topr {
+    flex: 1; /* Makes them take equal space */
+    display: flex;
+    align-items: center;
+
+}
+#topr{
+    margin-bottom:5px;
+}
+.f{
+    font-style: italic;
+    margin-top: 15px;
+    padding-left: 100px;
+     display: none;  
+    color: beige;
+}
+.social-icons {
+    display: flex;
+    margin-left: 350px;
+    margin-top: 20px;
+    gap: 15px;
+    font-size: 40px;
+    opacity: 20em;
+}
+.social-icons i {
+    color:white;
+    transition: color 0.3s;
+}
+.social-icons i:hover {
+    color: #0073b1;
+}
+.job-icon {
+    font-size: 45px;
+    color: white; /* White color for visibility on black background */
+    background-color: black; /* Black background */
+    padding: 10px;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    transition: color 0.3s;
+    padding-right: 15px;
+    margin-top: 3px;
+}
+
+.job-icon:hover {
+    color: lightgray; /* Slight hover effect */
+}
+
+.containers{
+    
+    width: 100%;
+    height: 95%;
+    padding-top: 40px;
+    display: grid;
+    gap: 5px;
+    justify-content: end;
+    grid-template-rows: repeat(2,265px);
+    grid-template-columns: repeat(2,245px);
+}
+.item{
+
+    border-radius: 25px;
+}
+.i1{
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.i44{
+    margin-bottom: 30px;
+    
+}
+
+ul, ol {
+    list-style: none; /* Removes default bullets or numbers */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+  }
+.l{
+    padding-bottom: 30px;
+    padding-left: 0%;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+  }
+  /* footer */
+ #fb1,#fb2,#fb3,#fb4{
+    display: flex;
+    
+ }
+ #fb1{
+    flex:1;
+    background-color: #333;
+ }
+ #fb2{
+    flex:1;
+    background-color: #333;
+ }
+ #fb3{
+    flex:1;
+    background-color: #333;
+ }
+ #fb4{
+    flex:1;
+    background-color:#333;
+ }
+ #fb11,#fb12,#fb13,#fb41{
+    font-weight: 300;
+    color: aliceblue;
+    font-size:15px ;
+    padding-top: 50px;
+    padding-left: 80px;
+ }
+ .newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+    max-width: 90%;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color:#8da385;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #e68900;
+}
+.f{
+    display:none;
+}
+@media (min-width:1050px) and (max-width:1500px){
+    .f{
+        display: block;
+        font-size: 50px;
+    }
+}
+@media (min-width:805px) and (max-width:1000px){
+    .f,.f i{
+        display: block;
+        font-size:25px;
+    }
+}
+@media (max-width:800px){
+    .f,.f i{
+        display: block;
+        font-size: 15px;
+    }
+}
+
+
+
+
+#fb3{
+    flex:1;
+    background-color: #333;
+ }
+
+#fb11,#fb12,#fb13,#fb41{
+    font-weight: 300;
+    color: aliceblue;
+    font-size:15px ;
+    padding-top: 50px;
+    padding-left: 80px;
+ }
+ .newsletter-form input[type="email"] {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 250px;
+    max-width: 90%;
+    height:35px ;
+}
+#se1{
+    font-weight: 700;
+    font-size: 40px;
+    padding-top:25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 100px;
+    width: 100%;
+    height:30%;
+    
+}
+#se2{
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 80px;
+    
+}
+#se3{
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 80px;
+    
+}
+#fb{
+    height: 280px;
+    width: 100vw;
+    background-color: pink;
+    display: flex;
+    
+}
+.newsletter-form button {
+    padding: 5px 20px;
+    font-size: 1em;
+    background-color:#8da385;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #e68900;
+}
+.last {
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px 0;
+    background-color: #333; /* Background color */
+    color: #ffffff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+
+.last a {
+    color: #1e90ff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.last a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+#fb1,#fb2,#fb3,#fb4{
+    display: flex;
+    
+ }
+ #fb1{
+    flex:1;
+    background-color: #333;
+ }
+ #fb2{
+    flex:1;
+    background-color: #333;
+ }
+ #fb3{
+    flex:1;
+    background-color: #333;
+ }
+ #fb4{
+    flex:1;
+    background-color:#333;
+ }
+ #fb11,#fb12,#fb13,#fb41{
+    font-weight: 300;
+    color: aliceblue;
+    font-size:15px ;
+    padding-top: 50px;
+    padding-left: 80px;
+ }
+ .newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+    max-width: 90%;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color:#8da385;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #e68900;
+}
+
+#fc{
+    height:800px;
+    width: 100vw;
+}
+#ft{  
+    display: flex;
+    height: 750px;
+    width: 100vw;
+    padding-top: 80px;
+}
+
+#ftl,#ftr{
+    display: flex;   /* Centers text inside */
+    height: 600px;
+    width: 100vw;
+
+}
+#ftl{ 
+    
+    flex:4.5;
+
+}
+#ftr{ 
+    flex:5.5;
+    
+}

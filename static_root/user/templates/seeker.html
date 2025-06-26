@@ -1,0 +1,82 @@
+<html>
+    <head>
+    <title>Seeker register</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+<body>
+    <form method='POST'>
+    {% csrf_token %}
+        <center>  
+            <div class="srcontainer mt-5 ">
+               <div > <center><u><b><h4>Seeker profile</h4></b></u></center></div>
+               <div class="mb-3" >
+                <label for="u_name" class="form-label">Username:</label>
+                <input class="form-control " id="u_name" type="text" name="sun"  value="" required >
+            
+            </div>
+                <div class="mb-3" >
+                    <label for="u_name" class="form-label">name:</label>
+                    <input class="form-control " id="u_name" type="text" name="sname"  value="" required >
+                    <small class="text-danger" id="name-validation"></small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Address:</label>
+                    <input class="form-control" type="password" name="addr" value="" required>
+                <div class="mb-3 mt-4">
+                <div class="mb-3">
+                    <label class="form-label">First-Name:</label>
+                    <input class="form-control" type="text" name="sfn" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last-Name:</label>
+                    <input class="form-control" type="text" name="sln" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone-no:</label>
+                    <input class="form-control" type="number" name="sp" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email-Id:</label>
+                    <input class="form-control" type="Email" name="em" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input class="form-control" type="text" name="spw" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Image:</label>
+                    <input class="form-control" type="file" name="im" value="" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Select your Gender:</label>
+                    <div style="border:1px solid lightgrey; padding:7px; border-radius:6px; background-color:white;" >
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gen" id="inlineRadio1" value="male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gen" id="inlineRadio2" value="female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                      </div>
+                    </div>
+                    
+                </div>
+
+                 <div>
+                    <label class="form-label">Role:</label>
+                    <select name="sro" class="form-control mb-3" required>
+                        <option value="seeker">Seeker</option>
+                        <option  value="creator">Creater</option>
+                    </select>
+                </div>
+                <button class=" btn btn-primary btn-sm mt-2" style="background-color:black ;border:2px solid black" type="submit">Submit</button>   
+                </center> 
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+</body>
+
+</html>

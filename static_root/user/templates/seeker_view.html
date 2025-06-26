@@ -1,0 +1,85 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>all seeker</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+</head>
+<body>
+    <hr>
+    <div style="padding-top:10px">
+        <table class="table" id="example" style="padding-top:40px; padding-bottom:20px">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Contact No</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.address }}</td>
+                    <td>{{ i.phone_number }}</td>
+                    <td>{{ i.email }}</td>
+                    <td>{{ i.gender }}</td>
+                    <td>{{ forloop.counter }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'copyHtml5',
+                        className: 'btn btn-outline-primary'
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        className: 'btn btn-outline-success'
+                    },
+                    {
+                        extend: 'csvHtml5',
+                        className: 'btn btn-outline-info'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        className: 'btn btn-outline-danger'
+                    },
+                    {
+                        extend: 'print',
+                        className: 'btn btn-outline-secondary'
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
+{% endblock %}

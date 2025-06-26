@@ -1,0 +1,39 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/foot.css">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>all seeker</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+</head>
+<body>
+    
+    <div  style="width:100%;padding-top:30px; height: 600px; ">
+        
+        <center> <div style="padding-top:40px;" >  
+             <div class="c" style="margin:0px 100px 0px 100px;background-color:#8DA385; padding:20px; border-radius: 10px; width: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.3);">
+                <h2 style="text-align: center; color: #333;">Creator Profile</h2>
+                <ul style="list-style-type: none; padding: 0; border: 2px solid #333; border-radius: 8px;">
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Username:</strong> {{creator.user_connected.username}}</li>
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Address:</strong> {{creator.address}}</li>
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Phone No:</strong> {{creator.phone_number}}</li>
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Email:</strong> {{creator.em}}</li>
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Company Name:</strong> {{creator.companyname}}</li>
+                    <li style="padding: 10px; border-bottom: 1px solid #ccc;"><strong>Experience:</strong> {{creator.yofex}}</li>
+                    <li style="padding: 10px;"><strong>Gender:</strong> {{creator.gender}}</li>
+                </ul>
+            </div>
+        </div>
+        </center>
+        </div>
+        <hr>
+      <br>
+    
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.3.1/dist/css/coreui.min.css" rel="stylesheet" integrity="sha384-PDUiPu3vDllMfrUHnurV430Qg8chPZTNhY8RUpq89lq22R3PzypXQifBpcpE1eoB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.3.1/dist/js/coreui.bundle.min.js" integrity="sha384-8QmUFX1sl4cMveCP2+H1tyZlShMi1LeZCJJxTZeXDxOwQexlDdRLQ3O9L78gwBbe" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="d-flex">
+        <!-- Fixed Sidebar -->
+        <div class="sidebar sidebar-dark border-end" style="width:250px; height: 100vh; position: fixed; top: 0px; left: 0; background-color: #333; overflow-y: auto;">
+            <div class="sidebar-header border-bottom">
+                <div class="sidebar-brand " style="font-size:30px">Sidebar</div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-title" style="color:white ; font-size:15px">Creator Dashboard</li><hr>
+                <li class="nav-item"  >
+                    <a class="nav-link active"  onclick="loadPag('{{creator.user_connected.username}}')" >
+                        <i class="nav-icon cil-speedometer"></i> Creator profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="load('/add-job/')">
+                        <i class="nav-icon cil-speedometer"></i> Add job
+                        <span class="badge bg-primary ms-auto">NEW</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="load('/show-job')">
+                      <i class="nav-icon cil-speedometer"></i> Applicants
+                      <span class="badge bg-primary ms-auto">NEW</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}" onclick="return confirm('Are you sure to want Logout?')">
+                    <i class="nav-icon cil-speedometer"></i> Logout
+                  </a>
+            </li>
+            
+              
+            
+            <div class="sidebar-footer border-top d-flex" style="margin-bottom:10px;">
+                <button class="sidebar-toggler" type="button"></button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content p-3" style="margin-left: 250px;background-color:#8DA385; padding-top:10px; background-size: cover; min-height:600px;max-height:3000px; width:100vw;">
+            <h2> Username: {{creator.user_connected.username}}</h2>
+            <p></P>
+            <div id="content-area" style="height:1000px;background-size: cover;min-height:500px; max-height:2000px;overflow-y: auto;  background-color: lightgray;">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function loadPag(username) {
+            fetch(`/creator/?username=${username}`)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("content-area").innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the page:', error));
+        }
+      function load(url) {
+          fetch(url)
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById("content-area").innerHTML = html;
+          })
+          .catch(error => console.error('Error loading the page:', error));
+      }
+      
+  </script>
+  </body>
+</html>
